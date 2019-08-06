@@ -1,0 +1,11 @@
+package fr.tonelv.rateandco.controls.interfaces;
+
+public interface IStudentControl {
+
+	
+    public Session CreateSessionRate();
+
+    public Session UpdateSessionRate();
+	
+	
+}
