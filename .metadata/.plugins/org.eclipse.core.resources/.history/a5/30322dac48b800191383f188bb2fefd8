@@ -1,0 +1,23 @@
+package fr.tonelv.rateandco.models;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+public class Session {
+	
+    private Integer Id;
+
+    private Date starting;
+
+    private Date ending;
+
+    private Course course;
+
+    private ArrayList<User> students;
+
+    private ArrayList<RateSession> ratesSession;
+
+    private ArrayList<RateStudent> ratesStudents;
+
+    private User trainer;
+}

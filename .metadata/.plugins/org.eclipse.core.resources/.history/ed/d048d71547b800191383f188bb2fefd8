@@ -1,0 +1,8 @@
+package fr.tonelv.rateandco.models;
+
+public class Course {
+ private Integer Id;
+ private String Name;
+ private String Description; 
+ 
+}
