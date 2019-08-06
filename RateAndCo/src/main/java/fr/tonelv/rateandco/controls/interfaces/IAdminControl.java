@@ -2,8 +2,7 @@ package fr.tonelv.rateandco.controls.interfaces;
 
 import fr.tonelv.rateandco.models.Course;
 import fr.tonelv.rateandco.models.Session;
-import fr.tonelv.rateandco.models.Student;
-import fr.tonelv.rateandco.models.Trainer;
+import fr.tonelv.rateandco.models.User;
 
 public interface IAdminControl {
 
@@ -13,13 +12,13 @@ public interface IAdminControl {
 
 	public Boolean DeleteSession();
 
-	public Student CreateStudent();
+	public User CreateStudent();
 
-	public Student UpdateStudent();
+	public User UpdateStudent();
 
-	public Trainer CreateTrainer();
+	public User CreateTrainer();
 
-	public Trainer UpdateTrainer();
+	public User UpdateTrainer();
 
 	public Boolean DeleteStudent();
 

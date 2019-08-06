@@ -1,13 +1,13 @@
 package fr.tonelv.rateandco.controls.interfaces;
 
-import fr.tonelv.rateandco.models.Session;
+import fr.tonelv.rateandco.models.RateSession;
 
 public interface IStudentControl {
 
 	
-    public Session CreateSessionRate();
+    public RateSession CreateSessionRate();
 
-    public Session UpdateSessionRate();
+    public RateSession UpdateSessionRate();
 	
 	
 }
