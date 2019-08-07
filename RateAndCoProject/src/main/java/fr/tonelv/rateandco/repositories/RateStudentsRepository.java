@@ -1,12 +1,11 @@
-package fr.tonelv.rateandco.controls;
+package fr.tonelv.rateandco.repositories;
 
 import java.util.ArrayList;
 
-import fr.tonelv.rateandco.controls.interfaces.ITrainerControl;
 import fr.tonelv.rateandco.models.RateStudent;
 import fr.tonelv.rateandco.models.Session;
 
-public class TrainerControl implements ITrainerControl{
+public class RateStudentsRepository implements IRateStudentsRepository {
 
 	@Override
 	public RateStudent getRateStudentById(Integer id) {
@@ -31,7 +30,5 @@ public class TrainerControl implements ITrainerControl{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	
 
 }

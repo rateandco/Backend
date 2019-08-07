@@ -1,10 +1,11 @@
-package fr.tonelv.rateandco.controls.interfaces;
+package fr.tonelv.rateandco.repositories;
+
 import java.util.ArrayList;
 
 import fr.tonelv.rateandco.models.RateStudent;
 import fr.tonelv.rateandco.models.Session;
 
-public interface ITrainerControl {
+public interface IRateStudentsRepository {
 
 	RateStudent getRateStudentById(Integer id);
 	

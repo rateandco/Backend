@@ -1,12 +1,11 @@
-package fr.tonelv.rateandco.controls;
+package fr.tonelv.rateandco.repositories;
 
 import java.util.ArrayList;
 
-import fr.tonelv.rateandco.controls.interfaces.IStudentControl;
 import fr.tonelv.rateandco.models.RateSession;
 import fr.tonelv.rateandco.models.Session;
 
-public class StudentControl implements IStudentControl{
+public class RateSessionsRepository implements IRateSessionsRepository {
 
 	@Override
 	public RateSession getRateSessionById(Integer id) {
@@ -32,5 +31,4 @@ public class StudentControl implements IStudentControl{
 		return null;
 	}
 
-	
 }
