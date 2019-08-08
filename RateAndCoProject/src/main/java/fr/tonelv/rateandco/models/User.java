@@ -1,5 +1,11 @@
 package fr.tonelv.rateandco.models;
 
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean(name = "userModel") // donne le nom pour faire lien avec JSF
+@SessionScoped
 public class User {
 
 	private Integer Id;
@@ -7,29 +13,19 @@ public class User {
 	private String lastName;
 	private String username;
 	private String hash;
-	private boolean isActive;
-	private String role;
+	private String message;
+//	private boolean isActive;
+//	private String role;
 
-	public User(String firstName, String lastName, String username, String hash, boolean isActive, String role) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.username = username;
-		this.hash = hash;
-		this.isActive = isActive;
-		this.role = role;
+	public User() {
 	}
 
-	public User(Integer id, String firstName, String lastName, String username, String hash, boolean isActive,
-			String role) {
-		super();
+	public User(Integer id, String firstName, String lastName, String username, String hash) {
 		Id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.username = username;
 		this.hash = hash;
-		this.isActive = isActive;
-		this.role = role;
 	}
 
 	public Integer getId() {
@@ -71,21 +67,24 @@ public class User {
 	public void setHash(String hash) {
 		this.hash = hash;
 	}
+	
 
-	public boolean isActive() {
-		return isActive;
+	public String getMessage() {
+		return message;
 	}
 
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
+	public void setMessage(String message) {
+		this.message = message;
 	}
-
-	public String getRole() {
-		return role;
+	
+	@PostConstruct // méthode init OK au démarrage
+	private void init() {
+		message = "Welcome from Rate And Co !!";
 	}
-
-	public void setRole(String role) {
-		this.role = role;
+	
+	public String valider() {
+		System.out.println("Votre formulaire a été envoyé");
+		return "inscriptionOk.xhtml";
 	}
 
 }

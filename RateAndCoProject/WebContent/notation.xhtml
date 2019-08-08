@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets">
+		
+<f:view>
+	<head>
+		<title>Formulaire Stagiaire</title>
+	</head>
+	<body>
+		<h:form>
+			<p>
+	    	   <h:outputText id="output" value="#{userModel.message}" />
+			</p>
+			<h4>
+				Formulaire d'évaluation stagiaire
+				<a href="https://www.doranco.fr/candidature/parcours/72">Formation Java chez DORANCO</a>.
+			</h4>
+			<table>	
+				<tr>
+					<td>Prénom:</td>
+					<td>
+						<h:inputText id="firstName" value="#{userModel.firstName}" required="true" />
+						<h:message for="firstName" />
+					</td>
+				</tr>
+				<tr>
+					<td>Nom:</td>
+					<td>
+						<h:inputText id="lastName" value="#{useModel.lastName}" required="true" />
+						<h:message for="lastName" />
+					</td>
+				</tr>
+				<tr>
+					<td>Pseudo:</td>
+					<td>
+						<h:inputText id="userName" value="#{useModel.userName}" required="true" />
+						<h:message for="userName" />
+					</td>
+				</tr>
+				<tr>
+					<td>Mot de passe:</td>
+					<td>
+						<h:inputText id="hash" value="#{userModel.hash}" required="true"
+										requiredMessage=" : Ce champ est obligatoire">
+						</h:inputText>
+						<h:message for="hash" />
+<!-- 						<h:outputText value=" (mm-dd-yy)" style="color:gray;"></h:outputText> -->
+						
+					</td>
+				</tr>
+<!-- 				<tr> -->
+<!-- 					<td>Email:</td> -->
+<!-- 					<td><h:inputText value="#{userbean.email}" required="true" -->
+<!-- 							id="email" /> <h:message for="email" /></td> -->
+<!-- 				</tr> -->
+<!-- 				<tr> -->
+<!-- 					<td>Qualité de service:</td> -->
+<!-- 					<td><h:selectOneMenu value="#{userbean.niveaudeservice}"> -->
+<!-- 							<f:selectItem itemLabel="Basic" itemValue="basic" /> -->
+<!-- 							<f:selectItem itemLabel="Medium" itemValue="medium" /> -->
+<!-- 							<f:selectItem itemLabel="Premium" itemValue="premium" /> -->
+<!-- 						</h:selectOneMenu></td> -->
+<!-- 				</tr> -->
+			</table>
+			<p>
+				<h:commandButton value="Valider" type="submit" action="#{userModel.valider()}" />
+<!-- 				<h:commandButton value="Inscription" type="submit" action="inscriptionOk.xhtml" /> -->
+			</p>
+		</h:form>
+	</body>
+</f:view>
+</html>

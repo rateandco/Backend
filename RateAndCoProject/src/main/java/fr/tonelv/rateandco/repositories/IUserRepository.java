@@ -5,9 +5,7 @@ import fr.tonelv.rateandco.models.User;
 public interface IUserRepository {
 	
 	User createUser(User user);
-	
-	User CreateUser(User user);
-	
+		
 	User updateUser(User user);
 	
 	Boolean deleteUser(Integer id);
